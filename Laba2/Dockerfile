@@ -9,7 +9,7 @@ COPY script2.sh /Desktop/Unix/script2.sh
 RUN chmod +x /Desktop/Unix/script2.sh
 
 #Создаём том для хранения данных
-VOLUME ["/Desktop/Unix/shared_volume"]
+VOLUME ["/shared_volume"]
 
 #Запускаем скрипт при запуске контейнера
 CMD ["/Desktop/Unix/script2.sh"]

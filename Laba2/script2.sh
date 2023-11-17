@@ -15,11 +15,6 @@ counter=$(printf "%03d" $((
 10#$(flock -x "$lock_fd"; cat "$counter_file" 2>/dev/null || echo 0) + 1
 )))
 
-# Обнуление счетчика при достижении 1000
-if [ $counter -ge 1000 ]; then
-    counter=0
-fi
-
 echo "$counter" > "$counter_file"
 filename=$(printf "%03d" "$counter")
 
